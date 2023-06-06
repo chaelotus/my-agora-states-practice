@@ -23,7 +23,7 @@ jobs:
         # AWS VERSION ------------------------------------------------
       - name: SHOW AWS CLI VERSION
         run: |
-          aws --version   # aws version 확인 명령어
+          aws --version  
            # AWS BUCKET and KEY ------------------------------------------------
       - name: Sync Bucket
         env:
@@ -32,7 +32,7 @@ jobs:
           AWS_EC2_METADATA_DISABLED: true
         run: |
           aws s3 sync \
-            --region ap-northeast-2 \ # 리전
-            build s3://fe-48-parkchae-s3 \  # 버킷이름
+            --region ap-northeast-2 \ 
+            build s3://fe-48-parkchae-s3 \  
             --delete
         working-directory: ./my-agora-states-client-react     # 작업한 디렉토리 명
